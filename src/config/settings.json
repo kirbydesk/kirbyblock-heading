@@ -1,0 +1,9 @@
+{
+  "fields": {
+    "tagline": true,
+    "heading": true
+  },
+  "tabs": {
+    "grid": true
+  }
+}
