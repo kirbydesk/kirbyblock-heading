@@ -1,3 +1,9 @@
 section[data-block="heading"] {
 
+	/* -------------- Tagline Margin--------------*/
+	[data-field="tagline"] {
+		+ [data-field="heading"] {
+			margin-top: 0.5rem;
+		}
+	}
 }

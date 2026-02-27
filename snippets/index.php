@@ -1,17 +1,21 @@
 <?php
 
 // Config
-$config   = pwConfig::load('pwtext');
+$config   = pwConfig::load('pwheading');
 $settings = $config['settings'];
 
-// Custom Background
+// Custom CSS
 if ($block->content()->style()->value() === 'custom'):
-	echo '<style>section[data-block-id="b'.$block->id().'"] { color: '.$block->content()->textcolor()->value().'; background-color: '.$block->content()->backgroundcolor()->value().' }</style>';
+	snippet('customcss', [
+		'blockid' => 'b'.$block->id(),
+		'textcolor' => $block->content()->textcolor()->value(),
+		'backgroundcolor' => $block->content()->backgroundcolor()->value()
+	]);
 endif;
 
 // Section
 echo '<section';
-echo ' data-block="text"';
+echo ' data-block="heading"';
 echo ' data-block-id="b'.$block->id().'"';
 echo ' data-margin-top="'.$block->margintop()->value().'"';
 echo ' data-margin-bottom="'.$block->marginbottom()->value().'"';
@@ -46,17 +50,6 @@ endif;
 if (!empty($settings['heading'])):
 	snippet('heading', ['content' => $block]);
 endif;
-
-// Editor
-if (!empty($settings['editor'])):
-	snippet('editor', ['content' => $block]);
-endif;
-
-// Buttons
-if (!empty($settings['buttons'])):
-	snippet('buttons', ['content' => $block]);
-endif;
-
 
 echo '</div></div>'."\n"; // End Grid
 echo '</section>'."\n";
