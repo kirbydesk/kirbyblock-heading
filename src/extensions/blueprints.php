@@ -1,15 +1,13 @@
 <?php return [ 'blocks/pwheading' => function () {
 
 	/* -------------- Config --------------*/
-	$config      = pwConfig::load('pwheading');
-	$settings    = $config['content'];
-	$tabSettings = $config['tabs'];
-	$defaults    = $config['defaults'];
-	$fields      = $config['fields'];
+	$config       = pwConfig::load('pwheading');
+	$settings     = $config['content'];
+	$tabSettings  = $config['tabs'];
+	$defaults     = $config['defaults'];
+	$fields       = $config['fields'];
+	$fieldOptions = $config['field-options'];
 
-	/* -------------- Allowed Fields --------------*/
-	$defaultTagline = !empty($settings['tagline']);
-	$defaultHeading = !empty($settings['heading']);
 
 	/* -------------- Tabs --------------*/
 	$tabs = [];
@@ -20,17 +18,23 @@
 	];
 
 	/* -------------- Tagline --------------*/
-	if ($defaultTagline) {
+	if (!empty($settings['tagline'])) {
 		$contentFields['tagline'] = [
-			'extends' => 'pagewizard/fields/tagline',
-			'align'   => $fields['align-tagline']
+			'extends'      => 'pagewizard/fields/tagline',
+			'align'        => $fields['align-tagline'],
+			'alignOptions' => $fieldOptions['tagline']['align'] ?? null,
 		];
 	}
 	/* -------------- Heading --------------*/
-	if ($defaultHeading) {
+	if (!empty($settings['heading'])) {
 		$contentFields['heading'] = [
-			'extends' => 'pagewizard/fields/heading',
-			'align'   => $fields['align-heading']
+			'extends'      => 'pagewizard/fields/heading',
+			'align'        => $fields['align-heading'],
+			'level'        => $fields['level-heading'] ?? null,
+			'size'         => $fields['size-heading'] ?? null,
+			'sizeOptions'  => $fieldOptions['heading']['sizes'] ?? null,
+			'alignOptions' => $fieldOptions['heading']['align'] ?? null,
+			'levelOptions' => $fieldOptions['heading']['level'] ?? null,
 		];
 	}
 

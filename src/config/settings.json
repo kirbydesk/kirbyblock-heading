@@ -1,8 +1,20 @@
 {
-  "fields": {
+  "tabs": {
+    "layout": true,
+    "style": true,
+    "grid": true,
+    "settings": true
+  },
+	"fields": {
     "content": {
-      "tagline": true,
-      "heading": true
+      "tagline": {
+        "align": [ "left", "center", "right" ]
+      },
+      "heading": {
+        "align": [ "left", "center", "right" ],
+        "level": [ "h1", "h2", "h3", "h4" ],
+        "sizes": [ "xs", "sm", "md", "lg", "xl", "2xl", "3xl" ]
+      }
     },
     "layout": {
       "padding": true,
@@ -16,11 +28,5 @@
       "block-size": true,
       "margin": true
     }
-  },
-  "tabs": {
-    "layout": true,
-    "style": true,
-    "grid": true,
-    "settings": true
   }
 }

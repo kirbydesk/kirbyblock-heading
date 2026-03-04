@@ -1,7 +1,7 @@
 {
   "content": {
-    "align-tagline": "left",
-    "align-heading": "left"
+    "tagline": { "align": "left" },
+    "heading": { "align": "left", "level": "h2", "size": "2xl" }
   },
   "layout": {
     "padding-top": true,
