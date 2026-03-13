@@ -4,8 +4,8 @@
     "heading": { "align": "left", "level": "h2", "size": "2xl" }
   },
   "layout": {
-    "padding-top": "small",
-    "padding-bottom": "small",
+    "padding-top": "large",
+    "padding-bottom": "large",
     "padding-left": true,
     "padding-right": true,
     "radius-top-left": false,
