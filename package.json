@@ -1,4 +1,6 @@
 {
 	"name": "kirbyblock-heading",
+	"description": "Heading",
+	"icon": "title",
 	"version": "1.0.2"
 }
