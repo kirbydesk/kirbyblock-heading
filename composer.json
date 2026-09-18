@@ -1,6 +1,6 @@
 {
 	"name": "kirbydesk/kirbyblock-heading",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Heading Block for Kirby CMS",
 	"type": "kirby-plugin",
 	"keywords": [
