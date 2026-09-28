@@ -1,10 +1,1 @@
 /* DO NOT MODIFY THIS FILE - Override in site/patches/css/kirbyblock-heading/_styles.css */
-section[data-block="heading"] {
-
-	/* -------------- Tagline Margin--------------*/
-	[data-field="tagline"] {
-		+ [data-field="heading"] {
-			margin-top: 0.5rem;
-		}
-	}
-}
