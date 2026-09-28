@@ -18,6 +18,7 @@
 				}
 			},
 			"heading": {
+				"locked": true,
 				"align": {
 					"options": [
 						"left",
