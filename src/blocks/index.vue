@@ -6,6 +6,7 @@
 
 		<pwBlockinfo
 			:value="$t('kirbyblock-heading.name')"
+			:design="'pwheading'"
 			icon="title"
 		/>
 
